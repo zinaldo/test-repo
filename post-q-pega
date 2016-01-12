@@ -1,0 +1,47 @@
+{
+	"id": "facebook-Santander-10153146431870588-10153095854255588",
+	"post_id": "10153146431870588",
+	"comment_id": "10153095854255588",
+	"comment_reply_id": "0",
+	"content": "Bom dia meu esposo esta com uma divida no cartao ele quer cancelar o cartao e negociar a divida pelo telefone nao conseguiu o que faço?",
+	"created_at": "2015-10-27 12:15:01",
+	"mood": 1,
+	"sentiment": "positive",
+	"origin": "facebook",
+	"application": "Facebook",
+	"brand": {
+		"name": "Santander",
+		"name_searchable": "Santander"
+	},
+	"collected_from": "FAN_PAGE",
+	"likes": 0,
+	"comments": 0,
+	"comment_replies": 0,
+	"replies": 0,
+	"shares": 0,
+	"page_id": "227808750587",
+	"archived": false,
+	"upload": false,
+	"terms": [
+		"cartao",
+		"negociar",
+		"telefone",
+		"cancelar",
+		"divida",
+		"faco",
+		"conseguiu",
+		"esposo",
+		"nao"
+	],
+	"author": {
+		"login": "757524301031137",
+		"name": "Lane Jurandi Santos",
+		"name_searchable": "Lane Jurandi Santos",
+		"gender": "m",
+		"followers": 0,
+		"friends": 0,
+		"tweets_count": 0,
+		"is_page": false
+	},
+	"answered": false
+}
