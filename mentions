@@ -1,0 +1,49 @@
+{
+	"general_params": {
+		"replied_by_login": null,
+		"reply_sent_by_login": null,
+		"since": "20160102000000",
+		"until": "20160202235959",
+		"timezone": "-3.0",
+		"service": ["twitter"],
+		"query": "",
+		"tag_mode": "all",
+		"sentiment": ["positive", "neutral", "negative"],
+		"only_bm_data": false,
+		"author_gender": ["male", "female", "unknown"],
+		"show_archived": false,
+		"dimension": "number_of_posts"
+	},
+	"twitter_only_params": {
+		"profile_search_tm": "",
+		"location": "",
+		"minimum_followers": null
+	},
+	"facebook_only_params": {
+		"profile_search_fbm": "",
+		"post_type": ["post", "comment", "comment_reply"],
+		"origin": "all",
+		"from": "all",
+		"content_type": "all",
+		"post_id": null
+	},
+	"instagram_only_params": {
+		"language": "all"
+	},
+	"report_sources": {
+		"monitoring_brands": [],
+		"twitter_mentions": [{
+			"login": "faleunoestebr",
+			"twitter_user": "Unoeste",
+			"source": "tm"
+		}],
+		"twitter_dms": [],
+		"facebook_pages_wall": [],
+		"facebook_private_messages": []
+	},
+	"grouping": "period_weekly",
+	"custom_period": 1,
+	"max_volume_size": 20,
+	"consolidate_by": "sentiment",
+	"hide": ""
+}
