@@ -1,0 +1,19 @@
+{
+	"update": {
+		"_id": "facebook-rspec_test_brand-950864408319437",
+		"_type": "post",
+		"_index": "bm-posts-2015-11-facebook-rspec_test_brand"
+	}
+}
+{
+	"script": "ctx._source.likes = likesParam; ctx._source.comments = commentsParam;",
+	"params": {
+		"likesParam": 1,
+		"commentsParam": 2
+	},
+	"upsert": {
+		"content": "alo mundo",
+		"likes": 1,
+		"comments": 2,
+	}
+}
