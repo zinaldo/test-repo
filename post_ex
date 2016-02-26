@@ -1,0 +1,79 @@
+{
+	"id": "twitter-kcelifecombr_KC___Huggies-692336249269567488",
+	"content": "#Kangoolu  ☑Combo Fralda Huggies Turma da Mônica Tripla Proteção  ????R$ 134,89  https://t.co/0Dp60dGC5K Utilize o... https://t.co/t3d5J5cN0f",
+	"rt": "#Kangoolu  ☑Combo Fralda Huggies Turma da Mônica Tripla Proteção  ????R$ 134,89  https://t.co/0Dp60dGC5K Utilize o... https://t.co/t3d5J5cN0f",
+	"created_at": "2016-01-27 13:19:59",
+	"mood": 1,
+	"sentiment": "positive",
+	"origin": "twitter",
+	"application": "Facebook",
+	"brand": {
+		"name": "kcelifecombr_KC___Huggies",
+		"name_searchable": "kcelifecombr_KC___Huggies"
+	},
+	"tags": [{
+		"user_login": "kcelifecombr",
+		"name": "Natureza_Divulgação"
+	}, {
+		"user_login": "kcelifecombr",
+		"name": "Assunto_Venda e Troca"
+	}],
+	"likes": 0,
+	"comments": 0,
+	"comment_replies": 0,
+	"replies": 0,
+	"shares": 0,
+	"replied": false,
+	"archived": false,
+	"upload": false,
+	"terms": [
+		"huggies",
+		"tripla",
+		"protecao",
+		"fralda",
+		"utilize",
+		"combo",
+		"monica",
+		"turma",
+		"134,89"
+	],
+	"hashtags": [
+		"#kangoolu"
+	],
+	"urls": [
+		"t.co/t3d5j5cn0f",
+		"t.co/0dp60dgc5k"
+	],
+	"author": {
+		"login": "_CDI_CDI",
+		"name": "CDI",
+		"name_searchable": "CDI",
+		"gender": "n",
+		"description": "Comunidade no VK.Página do Facebook! Desde o Orkut buscando os melhores preços e promoções nas maiores lojas Fb: http://bit.ly/originalcdi http://vk.com/cmmcdi",
+		"followers": 1545,
+		"friends": 1980,
+		"tweets_count": 22226,
+		"image": "http://pbs.twimg.com/profile_images/570256813942001664/B9AE7vrF_normal.jpeg",
+		"location": "Cupom, descontos na Internet!",
+		"location_searchable": "Cupom, descontos na Internet!",
+		"is_page": false,
+		"bios": [
+			"originalcdi",
+			"facebook",
+			"cmmcdi",
+			"melhores",
+			"maiores",
+			"precos",
+			"buscando",
+			"vk.pagina",
+			"orkut",
+			"bit.ly",
+			"comunidade",
+			"promocoes",
+			"lojas",
+			"vk.com"
+		]
+	},
+	"answered": false,
+	"service": "twitter"
+}
