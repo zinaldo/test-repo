@@ -1,0 +1,339 @@
+{
+	"settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas" : 1
+        },
+        "analysis": {
+            "filter": {
+                "tweet_filter": {
+                    "type": "word_delimiter",
+                    "split_on_numerics": false,
+                    "type_table": [
+                        "# => ALPHANUM",
+                        "@ => ALPHANUM"
+                    ]
+                },
+                "brazilian_stop": {
+          			"type":       "stop",
+          			"stopwords":  "_brazilian_" 
+        		}
+            },
+            "analyzer": {
+                "tweet_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "whitespace",
+                    "filter": [
+                        "lowercase",
+                        "tweet_filter",
+                        "asciifolding",
+                        "brazilian_stop"
+                    ]
+                },
+                "lowercase_keyword_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "keyword",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            }
+        }
+    },
+	"aliases": {
+		"bm-posts": {}
+	},
+    "mappings": {
+    	"_default_": {
+			"_all": {
+				"enabled": false
+			}
+		},
+        "post": {
+            "_routing": {
+                "required": true
+            },
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "post_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "comment_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "comment_reply_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "content": {
+	    			"type": "string",
+	    			"analyzer": "tweet_analyzer"
+				},
+                "rt": {
+	    			"type": "string",
+	    			"index": "not_analyzed"
+				},
+                "created_at": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "updated_at": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                "elapsed_time": {
+                    "type": "long"
+                },
+                "mood": {
+                    "type": "float"
+                },
+                "sentiment": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "origin": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "service": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "source": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "application": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "brand": {
+                	"properties": {
+                		"category": {
+		                    "type": "string",
+		                    "index": "not_analyzed"
+		                },
+		                "name" : {
+		                    "type": "string",
+		                    "index": "not_analyzed"
+	                    },
+		                "name_searchable" : {
+		                    "type": "string"
+	                    },
+		                "language": {
+		                    "type": "string",
+		                    "index": "not_analyzed"
+		                },
+		                "region": {
+		                    "type": "string",
+		                    "index": "not_analyzed"
+		                }
+                	}
+                },
+                "tags": {
+                    "type" : "nested",
+                    "properties": {
+                        "user_login": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "name": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        },
+                        "value": {
+                            "type": "string",
+                            "index": "not_analyzed"
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "caption": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string",
+                    "index": "no"
+                },
+                "picture": {
+                    "type": "string",
+                    "index": "no"
+                },
+                "link": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "collected_from": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "fan_page": {
+                    "type": "integer"
+                },
+                "page_url": {
+                    "type": "string",
+                    "index": "no"
+                },
+                "likes": {
+                    "type": "integer"
+                },
+                "comments": {
+                    "type": "integer"
+                },
+                "comment_replies": {
+                    "type": "integer"
+                },
+                "replies": {
+                    "type": "integer"
+                },
+                "shares": {
+                    "type": "integer"
+                },
+                "page_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "group_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "replied_element_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "in_reply_to": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "replied_by_login": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "reply_sent_by_login": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "replied": {
+                    "type": "boolean"
+                },
+                "term": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "archived": {
+                    "type": "boolean"
+                },
+                "upload": {
+                    "type": "boolean"
+                },
+                "terms": {
+                    "type": "string",
+                    "index": "not_analyzed",
+                    "doc_values": true
+                },
+                "hashtags": {
+                    "type": "string",
+                    "index": "not_analyzed",
+		            "doc_values": true
+                },
+                "mentions": {
+                    "type": "string",
+                    "index": "not_analyzed",
+		            "doc_values": true
+                },
+                "urls": {
+                    "type": "string",
+                    "index": "not_analyzed",
+		            "doc_values": true
+                },
+                "author": {
+                    "properties": {
+                        "login": {
+		                    "type": "string",
+		                    "index": "not_analyzed",
+                    		"doc_values": true
+		                },
+		                "name": {
+		                    "type": "string",
+		                    "analyzer": "lowercase_keyword_analyzer"
+		                },
+		                "name_searchable": {
+		                    "type": "string"
+		                },
+		                "gender": {
+		                    "type": "string",
+		                    "index": "not_analyzed"
+		                },
+		                "description": {
+		                    "type": "string",
+	    					"analyzer": "tweet_analyzer"
+		                },
+		                "followers": {
+		                    "type": "integer"
+		                },
+		                "friends": {
+		                    "type": "integer"
+		                },
+		                "tweets_count": {
+		                    "type": "integer"
+		                },
+		                "image": {
+		                    "type": "string",
+		                    "index": "no"
+		                },
+		                "location": {
+		                    "type": "string",
+	    					"analyzer": "lowercase_keyword_analyzer"
+		                },
+		                "location_searchable": {
+		                    "type": "string"
+		                },
+		                "bios": {
+		                    "type": "string",
+		                    "index": "not_analyzed",
+		                    "doc_values": true
+		                },
+		                "is_page": {
+		                    "type": "boolean"
+		                }
+                    }
+                },
+                "thread_id": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "user_login": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "twitter_user": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "answered": {
+                    "type": "boolean"
+                },
+                "changed": {
+                    "type": "boolean"
+                },
+                "upgrade": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
